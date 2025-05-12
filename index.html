@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game LC</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="overlay">
+      <h2>Game over</h2>
+      <span id="seconds">10s</span>
+    </div>
+    <div class="border-style">
+      <main id="game">
+        <h1>Game LC</h1>
+        <div id="game-map" style="height: 350px; width: 350px;">
+          <div id="player"></div>
+          <p class="desc">Nao permita que o quadrado chegue na borda.</p>
+        </div>
+        <div class="game-controls">
+          <button id="btn-up">
+            <i class="fa-regular fa-square-caret-up"></i>
+          </button>
+          <button id="btn-right">
+            <i class="fa-regular fa-square-caret-right"></i>
+          </button>
+          <button id="btn-down">
+            <i class="fa-regular fa-square-caret-down"></i>
+          </button>
+          <button id="btn-left">
+            <i class="fa-regular fa-square-caret-left"></i>
+          </button>
+        </div>
+        <footer>
+          <p>Developed by Lucas Deodato</p>
+          <div class="contacts">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  Whatsapp
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                  Linkedin
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

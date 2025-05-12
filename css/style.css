@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:wght@300;400;500;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+}
+
+.border-style {
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#game {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.6);
+    position: relative;
+    background-color: #444;
+}
+
+#game::after {
+    content: '';
+    display: block;
+    width: 300%;
+    height: 50%;
+    background: #00ffd0;
+    background: linear-gradient(90deg,rgba(0, 255, 208, 1) 30%, rgba(65, 8, 255, 1) 100%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    animation: rotateGame 5s ease-in-out infinite;
+}
+
+@keyframes rotateGame {
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+h1 {
+    text-align: center;
+    background: #00ffd0;
+    background: linear-gradient(90deg,rgba(0, 255, 208, 1) 30%, rgba(65, 8, 255, 1) 100%);
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+    margin: 0 auto 10px;
+}
+
+#game-map {
+    width: 350px;
+    height: 350px;
+    border-radius: 5px;
+    background-color: #555;
+    border: solid 1px #eee;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#player {
+    height: 15%;
+    width: 15%;
+    background: #222222;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+.game-controls {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.game-controls button {
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 2em;
+    background-color: #555;
+    color: #acacac;
+    box-shadow: 0 0 5px rgba(255,255,255,.6);
+    cursor: pointer;
+}
+
+.game-controls button:hover {
+    background-color: #333;
+}
+
+#btn-up {
+    grid-column: 2/3;
+}
+
+#btn-left {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#btn-right {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#btn-down {
+    grid-column: 2/3;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+        color: #fff;
+        text-shadow: 0 0 5px rgba(0,0,0,.6);
+    }
+}
+
+.contacts ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.contacts ul li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 0 10px;
+    text-decoration: none;
+    gap: 2px;
+    position: relative;
+}
+
+.contacts ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: .3s linear;
+}
+
+.contacts ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    background-color: rgba(0,0,0,.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#overlay h2 {
+    font-size: 5em;
+    color: rgba(255,255,255,1);
+    text-shadow: 10px 10px 5px rgba(0, 255, 208, 0.418);
+} 
+
+#seconds {
+    font-size: 3em;
+    font-weight: 500;
+    color: #fff;
+}
+
+.desc {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    font-size: .8em;
+    color: #eeeeee70;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px #000;
+}
